@@ -114,8 +114,7 @@ nav {
 
   & ul {
     display: flex;
-    gap: var(--size-3);
-    gap: 2.25rem;
+    gap: calc(var(--size-7) + var(--size-1));
   }
 
   & .logo {
@@ -273,9 +272,6 @@ main {
 
   @media (--md-and-above) {
     padding: var(--size-4);
-    & h2 {
-      font-size: var(--font-size-7);
-    }
   }
 }
 
