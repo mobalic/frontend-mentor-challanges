@@ -143,8 +143,6 @@ nav {
       padding: var(--size-5);
       position: fixed;
       top: 0;
-      /* right: 0; */
-
       right: -100%;
       background-color: var(--surface-1);
       block-size: 100%;
