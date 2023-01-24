@@ -80,7 +80,17 @@ export default function App() {
 
           <span>{status}</span>
         </div>
-        <button id="theme-toggle">
+        <button
+          id="theme-toggle"
+          title="Toggles light & dark"
+          aria-label="auto"
+          aria-live="polite"
+          onClick={() => {
+            // Set the theme value here to resolve the issue with Chrome on Android.
+            theme.value = theme.value === 'light' ? 'dark' : 'light';
+            setPreference();
+          }}
+        >
           <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
             <mask id="moon">
               <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>

@@ -30,12 +30,6 @@ reflectPreference();
 window.onload = () => {
   // set on load so screen readers can see latest value on the button
   reflectPreference();
-
-  document.querySelector('#theme-toggle').addEventListener('click', (e) => {
-    theme.value = theme.value === 'light' ? 'dark' : 'light';
-
-    setPreference();
-  });
 };
 
 window
