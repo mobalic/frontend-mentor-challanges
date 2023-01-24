@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { DATA } from './utils';
 import styles from './App.module.css';
 import classnames from 'classnames';
-// function Button() {
-//   return <button>Mark all as read</button>;
-// }
 
 function Card(props) {
   const cx = classnames(styles.card, { [styles.unread]: !props.read });
