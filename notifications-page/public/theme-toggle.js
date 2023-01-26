@@ -17,7 +17,7 @@ const reflectPreference = () => {
   document.firstElementChild.setAttribute('data-theme', theme.value);
   document
     .querySelector('#theme-toggle')
-    ?.setAttribute('aria-live', theme.value);
+    ?.setAttribute('aria-label', theme.value);
 };
 
 const theme = {
