@@ -83,7 +83,6 @@ export default function App() {
         <button
           id="theme-toggle"
           title="Toggles light & dark"
-          aria-label="auto"
           aria-live="polite"
           onClick={() => {
             // Set the theme value here to resolve the issue with Chrome on Android.
