@@ -50,4 +50,8 @@
       transition: top var(--duration) var(--easeOutExpo);
     }
   }
+
+  @media (--mobile) {
+    display: none;
+  }
 }

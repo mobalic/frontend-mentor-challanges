@@ -194,9 +194,9 @@
     margin-inline: var(--sm-space);
   }
 
-  @media (--sm-mobile) {
+  /* @media (--sm-mobile) {
     .logo svg {
       inline-size: 100px;
     }
-  }
+  } */
 }
