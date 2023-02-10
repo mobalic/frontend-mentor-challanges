@@ -1,0 +1,133 @@
+@layer base, library,carousel,carousel-custom;
+
+@import 'open-props/style' layer(base);
+/* @import 'open-props/buttons' layer(library); */
+@import 'open-props/normalize' layer(library);
+
+@import './carousel.css' layer(carousel);
+@import './custom-carousel-items.css' layer(carousel-custom);
+@import './navbar.css';
+@import './home.css';
+@import './cart.css';
+@import './lightbox.css';
+
+@custom-media --mobile (max-width: 855px);
+@custom-media --desktop (min-width: 855px);
+@custom-media --sm-mobile (max-width: 475px);
+@custom-media --md-and-above (min-width: 1110px);
+@custom-media --md-and-below (max-width: 1110px);
+
+:root {
+  font-family: 'Kumbh Sans', sans-serif;
+  --surface-c-1: #ff7d1a;
+  --surface-c-1-2: hsl(26, 84%, 49%);
+  --surface-c-2: hsl(25, 100%, 94%);
+  --surface-c-3: hsl(220, 13%, 13%);
+  --surface-c-4: hsl(219, 9%, 45%);
+  --surface-c-5: hsl(220, 14%, 75%);
+  --surface-c-6: hsl(223, 64%, 98%);
+  --surface-c-7: hsl(0, 0%, 100%);
+
+  --sm-space: var(--size-3);
+  --md-space: var(--size-7);
+
+  --font-bold: var(--font-weight-7);
+
+  --nav-block-size: calc(var(--md-space) * 3);
+}
+
+/* :where(html):not(#\#):not(#\#):not(#\#) {
+  --link: hsl(26, 100%, 55%);
+} */
+
+/* Reset */
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:where(html) {
+  block-size: 100%;
+  scroll-behavior: smooth;
+
+  /* here you can change the color variables */
+}
+
+:where(:not(dialog)) {
+  margin: 0;
+}
+
+:where(img, svg) {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:where(ul) {
+  padding: 0;
+  list-style: none;
+}
+
+:where(a) {
+  text-decoration: none;
+}
+
+body {
+  min-block-size: 100%;
+  background-color: var(--surface-c-7);
+}
+
+#app {
+  margin-inline: auto;
+  max-inline-size: 1110px;
+}
+
+main {
+  display: grid;
+
+  @media (--desktop) {
+    /* padding-block-start: calc(var(--md-space) * 3); */
+    padding-block: calc(var(--md-space) * 3);
+
+    min-block-size: calc(90vh - var(--nav-block-size));
+    max-block-size: 900px;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--md-space);
+    margin-inline: var(--sm-space);
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    max-inline-size: 1110px;
+  }
+}
+
+#products {
+  & > a {
+    padding: 0;
+  }
+
+  @media (--mobile) {
+    #main-carousel-scroller {
+      cursor: auto;
+    }
+  }
+}
+
+.btn-custom {
+  background-color: var(--surface-c-1);
+  color: var(--surface-c-7);
+  padding-block: var(--sm-space);
+  border-radius: var(--radius-2);
+  font-size: 1rem;
+  font-weight: var(--font-bold);
+  box-shadow: var(--shadow-6);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--sm-space) / 2);
+
+  &:hover {
+    background: hsla(27, 100%, 71%, 1);
+  }
+}

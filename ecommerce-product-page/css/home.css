@@ -1,0 +1,129 @@
+.home {
+  padding-bottom: var(--md-space);
+  --gap: var(--sm-space);
+  display: grid;
+  gap: var(--gap);
+  & header {
+    display: grid;
+    gap: calc(var(--gap) / 2);
+  }
+
+  & h1 {
+    font-size: 1.75rem;
+    line-height: var(--font-lineheight-0);
+  }
+
+  & p {
+    color: var(--surface-c-4);
+    font-size: 15.5px;
+    max-inline-size: 37ch;
+  }
+
+  & h3 {
+    font-size: 1.75rem;
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+
+    & span {
+      background-color: var(--surface-c-2);
+      color: var(--surface-c-1);
+      font-size: 1rem;
+      padding: 0.5ch;
+      border-radius: var(--radius-2);
+    }
+  }
+
+  .sub-header {
+    font-size: var(--font-size-0);
+    letter-spacing: var(--font-letterspacing-4);
+    font-weight: var(--font-bold);
+    color: var(--surface-c-1);
+    text-transform: uppercase;
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price-before {
+    text-decoration: line-through;
+    color: var(--surface-c-5);
+    font-weight: var(--font-bold);
+  }
+
+  .controller {
+    display: grid;
+    gap: var(--gap);
+  }
+
+  .counter-controller {
+    box-shadow: var(--shadow-3);
+    display: grid;
+
+    border-radius: var(--radius-2);
+
+    grid-template-columns: var(--size-8) 1fr var(--size-8);
+    background-color: var(--surface-c-6);
+
+    box-shadow: var(--shadow-2);
+
+    > * {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .counter {
+      font-weight: var(--font-bold);
+      font-size: 1rem;
+      /* background-color: aquamarine; */
+    }
+
+    & button {
+      padding-block: var(--sm-space);
+      background-color: inherit;
+    }
+  }
+
+  @media (--mobile) {
+    margin-inline: var(--sm-space);
+  }
+
+  @media (--desktop) {
+    --gap: var(--md-space);
+    padding-bottom: 0px;
+    max-inline-size: 45ch;
+    & .controller {
+      --gap: var(--md-space);
+      grid-template-columns: 1fr 24ch;
+    }
+
+    & header {
+      gap: calc(var(--gap) / 3);
+    }
+
+    & h1 {
+      font-size: 44px;
+      line-height: 117.02%;
+    }
+
+    & p {
+      font-size: 1rem;
+      max-inline-size: 49ch;
+    }
+
+    & h3 {
+      gap: var(--sm-space);
+    }
+
+    .price {
+      flex-direction: column;
+      align-items: initial;
+
+      gap: calc(var(--gap) / 3);
+    }
+  }
+}
