@@ -193,4 +193,10 @@
   @media (--md-and-below) {
     margin-inline: var(--sm-space);
   }
+
+  @media (--sm-mobile) {
+    .logo svg {
+      inline-size: 100px;
+    }
+  }
 }

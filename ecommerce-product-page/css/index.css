@@ -13,7 +13,7 @@
 
 @custom-media --mobile (max-width: 855px);
 @custom-media --desktop (min-width: 855px);
-@custom-media --sm-mobile (max-width: 475px);
+@custom-media --sm-mobile (max-width: 370px);
 @custom-media --md-and-above (min-width: 1110px);
 @custom-media --md-and-below (max-width: 1110px);
 
@@ -35,10 +35,6 @@
 
   --nav-block-size: calc(var(--md-space) * 3);
 }
-
-/* :where(html):not(#\#):not(#\#):not(#\#) {
-  --link: hsl(26, 100%, 55%);
-} */
 
 /* Reset */
 
