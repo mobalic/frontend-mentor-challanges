@@ -62,6 +62,9 @@
     margin-inline-start: auto;
     cursor: pointer;
 
+    align-self: center;
+    padding-left: var(--sm-space);
+
     & svg {
       min-inline-size: max-content;
     }
