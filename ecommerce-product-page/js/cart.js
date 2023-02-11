@@ -22,7 +22,7 @@ addProductBtn.addEventListener('click', () => {
     productsCart.innerHTML = `<div class="cart-item">
    <img
      src="/images/image-product-1-thumbnail.jpg"
-     alt=""
+     alt="Sneakers image"
    />
    <div class="cart-text">
      <div class="product-name">
