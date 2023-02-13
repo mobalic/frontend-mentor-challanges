@@ -101,7 +101,7 @@ main {
   @media (--mobile) {
     display: flex;
     flex-direction: column;
-    block-size: calc(100vh - var(--nav-block-size));
+    block-size: calc(100svh - var(--nav-block-size));
     justify-content: space-between;
 
     #products {
