@@ -96,6 +96,21 @@ main {
     margin-inline: auto;
     max-inline-size: 1110px;
   }
+
+  /* mobile layout fixed */
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+    block-size: calc(100vh - var(--nav-block-size));
+    justify-content: space-between;
+
+    #products {
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      margin-bottom: var(--sm-space);
+    }
+  }
 }
 
 #products {

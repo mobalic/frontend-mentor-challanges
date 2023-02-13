@@ -1,5 +1,5 @@
 .home {
-  padding-bottom: var(--md-space);
+  /* padding-bottom: var(--md-space); */
   --gap: var(--sm-space);
   display: grid;
   gap: var(--gap);
