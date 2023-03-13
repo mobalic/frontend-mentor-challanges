@@ -76,7 +76,7 @@ figure {
   padding-block-end: calc((var(--gap)) + var(--size) - 0.75rem);
   border-radius: var(--radius-3);
 
-  & figcaption {
+  & h1 {
     text-align: center;
     font-size: var(--font-size-0);
     letter-spacing: var(--font-letterspacing-5);
