@@ -96,12 +96,18 @@ figure {
       padding-block-end: var(--gap);
     }
     &::after {
-      content: var(--pattern-divider-desk);
+      content: ' ';
       display: block;
+      background-image: var(--pattern-divider-desk);
+      background-repeat: no-repeat;
 
-      @media (--mobile) {
-        content: var(--pattern-divider-mobile);
-      }
+      background-position: center;
+      width: 100%;
+      block-size: 20px;
+
+      /* @media (--mobile) {
+        background: var(--pattern-divider-mobile);
+      } */
     }
   }
 
