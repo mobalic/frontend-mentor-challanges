@@ -134,7 +134,7 @@ body:has(input:checked) {
   padding: var(--size-8) var(--size-7);
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-4);
-  gap: var(--sm-space);
+  gap: var(--size-3);
 
   .detail {
     display: grid;
@@ -173,7 +173,7 @@ body:has(input:checked) {
     --bg-color: rgba(105, 111, 221, 1);
 
     --text-color: var(--suraface-0);
-    background: var(--bg-color);
+    background: var(--custom-gradient);
     color: var(--text-color);
     border: var(--border-size-2) solid currentColor;
     padding: var(--size-3);
