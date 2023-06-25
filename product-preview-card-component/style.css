@@ -6,6 +6,7 @@
   --surface-1: hsl(0, 0%, 100%);
   --surface-2: hsl(30, 38%, 92%);
   --surface-3: hsl(158, 36%, 37%);
+  --button-hover: hsl(158, 36%, 28%);
 
   --text-1: hsl(228, 12%, 48%);
   --text-2: hsl(212, 21%, 14%);
@@ -38,7 +39,7 @@
 
 body {
   min-block-size: 100%;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: var(--font-sans);
   color: var(--text-1);
   background-color: var(--surface-2);
@@ -58,17 +59,17 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    gap: 28px;
+    gap: 1.75rem;
   }
 
   & header {
     display: grid;
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   & small {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 0.75rem;
 
     letter-spacing: 0.365em;
   }
@@ -98,6 +99,12 @@ body {
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+
+
+    &:hover {
+      background-color: var(--button-hover);
+    }
   }
   & .price {
     display: flex;
@@ -111,7 +118,7 @@ body {
     }
 
     & span {
-      font-size: 12px;
+      font-size: 0.75rem;
       text-decoration-line: line-through;
     }
   }
