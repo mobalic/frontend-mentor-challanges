@@ -10,4 +10,3 @@ This repository contains my Frontend Mentor challenges solutions. Each challenge
 5. E-commerce product page [`Demo`](https://ecommerce-product-page-app.netlify.app/)
 6. Todo app  [`Demo`](https://my-todo-app-v1.netlify.app/)
 7. Advice generator app  [`Demo`](https://my-advice-generator-v1.netlify.app/)
-8. Interactive card details form [`Demo`](https://interactive-card-details-form-demo.vercel.app/)
