@@ -1,0 +1,95 @@
+.formContainer {
+  display: grid;
+  align-items: center;
+  & form {
+    display: flex;
+    flex-direction: column;
+    inline-size: min(100%, 379px);
+    @media (--md-n-above) {
+      margin-inline-start: 104px;
+    }
+  }
+
+  .formControl {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-2);
+    min-block-size: 105px;
+  }
+
+  .formWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--size-3);
+  }
+
+  .expContainer {
+    display: flex;
+    gap: var(--size-2);
+  }
+
+  #cvc {
+    inline-size: 100%;
+  }
+
+  /* Look*/
+  & label {
+    white-space: nowrap;
+    color: var(--very-dark-violet);
+    font-size: var(--font-size-0);
+    letter-spacing: 0.12rem;
+    font-weight: 500;
+  }
+
+  & input {
+    --gradient-border-color: linear-gradient(90deg, #e0e0e0 0%, #e0e0e0 100%);
+
+    background-color: var(--white) !important;
+    border-radius: var(--radius-2);
+    padding: 0.5rem 0.9375rem;
+    font-size: 1.125rem;
+    outline-offset: unset;
+
+    inline-size: 100%;
+    border: var(--border-size-2) solid transparent;
+    background: linear-gradient(var(--white), var(--white)) padding-box,
+      var(--gradient-border-color) border-box;
+
+    /* border: var(--border-size-2) solid #bebcbf; */
+    transition: 0.2s ease;
+    /* 
+    &:hover {
+      outline: none;
+
+      --gradient-border-color: linear-gradient(90deg, #cacaca 0%, #cacaca 100%);
+    } */
+
+    :is(:focus, :active, :focus-visible) {
+      background-color: var(--white);
+    }
+
+    &:focus-visible {
+      outline: none;
+      --gradient-border-color: var(--active-input-border-gradient);
+    }
+
+    &::placeholder {
+      color: #bebcbf;
+    }
+  }
+
+  .error {
+    border-color: var(--input-error);
+    /* outline-color: red; */
+  }
+
+  @media (--md-n-below) {
+    align-items: start;
+    justify-items: center;
+  }
+}
+
+.errorMessage {
+  color: var(--input-error);
+  font-size: 0.75rem;
+}

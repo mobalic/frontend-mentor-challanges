@@ -1,0 +1,33 @@
+@import 'open-props/style';
+@import 'open-props/normalize';
+@import 'open-props/buttons';
+
+:root {
+  --active-input-border-gradient: linear-gradient(
+    to right,
+    hsl(249, 99%, 64%) 0%,
+    hsl(278, 93%, 30%) 100%
+  );
+
+  --input-error: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: #8e8593;
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body {
+  font-size: var(--font-size-3);
+}
+
+.custom-button {
+  background-color: var(--very-dark-violet);
+  font-weight: unset;
+  color: var(--white);
+  text-shadow: unset;
+  outline-offset: unset;
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-5);
+  outline-color: var(--very-dark-violet);
+  border: none;
+}

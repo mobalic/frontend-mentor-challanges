@@ -1,0 +1,36 @@
+.main {
+  min-block-size: 100vh;
+  display: grid;
+
+  align-items: start;
+
+  grid-template-columns: 1fr 1fr;
+  background-image: url(/images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 31% 100%;
+  background-color: white;
+  padding-block-end: var(--size-5);
+  gap: var(--size-1);
+
+  @media (--md-n-below) {
+    grid-template-columns: 1fr;
+    background-image: url(/images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 370px;
+    padding-inline: var(--size-3);
+    padding-block-end: var(--size-5);
+
+    /* align-content: flex-start; */
+  }
+
+  @media (--mobile) {
+    background-size: 100% 240px;
+  }
+
+  @media (--md-n-above) {
+    padding-block: var(--size-5);
+    align-items: center;
+  }
+}
